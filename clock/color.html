@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/null.ico">
+    <title>color.clock</title>
+  </head>
+  <body id="background" style="background: none; font-family: 'Courier New', monospace; white-space: nowrap;">
+    <div id="color" style="overflow: hidden; position: fixed; top: 100%; transform: translate(-2.5%, -100%); text-align: center; font-size: 1.25em;">
+    RBG()
+    </div>
+    <div id="clock" style="overflow: hidden; position: fixed; left: 50%; top: 50%; transform: translate(-60%, -50%); text-align: center; font-size: 15em;">
+      12:00
+    </div>
+    <div id="colon" style="font-size: 10em; position: fixed; left: 50%; top: 50%; transform: translate(-120%, -60%); text-align: center;">
+      :
+    </div>
+    <div id="session" style="font-size: 5em; position: fixed; left: 50%; top: 50%; transform: translate(320%, -105%); text-align: center;">
+      12:00
+    </div>
+    <div id="seconds" style="font-size: 5em; position: fixed; left: 50%; top: 50%; transform: translate(320%, -15%); text-align: center;">
+      12:00
+    </div>
+    <div id="date" style="font-size: 5em; position: fixed; left: 50%; top: 50%; transform: translate(-50%, 100%); text-align: center;">
+      12:00
+    </div>
+	<script src="clock.js">
+	</script>
+	<script type="text/javascript">
+  	currentTime("color");
+	</script>
+	<style>
+    ::selection {
+      background: white;
+      color: black;
+    }
+    ::-moz-selection {
+      background: white;
+      color: black;
+    }
+  </style>
+  </body>
+</html>

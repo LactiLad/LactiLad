@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>cannon.cafe</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="preload" href="transfonter.org-20230405-004209/GNUUnifontFull.woff2" as="font" type="font/woff2" crossorigin>
+  </head>
+
+  <body>
+    <div id="monitor">
+      <div id="screen">
+      <div id="box" style="visibility: hidden; position: absolute; border-width: 0.125vw; border: solid black; background-color:white; left:100px; right:100px; top:100px; bottom:100px;"></div>
+        <div id="notepadArea">
+          <div id="notepadX"></div>
+          <div id="notepadAreaText">
+            I am not associated with any of these projects. They're just cool and I think they're neat!
+            <div class="listItem"><a class="itemIndicator" href="https://store.steampowered.com/app/519860/DUSK/"><img class="itemIndicator" src="steam.png"></a>Dusk</div>
+            <div class="listItem"><a class="itemIndicator" href="https://store.steampowered.com/app/1285670/Post_Void/"><img class="itemIndicator" src="steam.png"></a>Post Void</div>
+            <div class="listItem"><a class="itemIndicator" href="https://store.steampowered.com/app/1234180/Moons_Of_Darsalon/"><img class="itemIndicator" src="steam.png"></a>Moons of Darsalon</div>
+            <div class="listItem"><a class="itemIndicator" href="https://corru.observer"><img class="itemIndicator" src="web.png"></a>Corru.observer</div>
+            <div class="listItem"><a class="itemIndicator" href="https://store.steampowered.com/app/2212330/Your_Only_Move_Is_HUSTLE/"><img class="itemIndicator" src="steam.png"></a>YOMI Hustle</div>
+            <div class="listItem"><a class="itemIndicator" href="https://store.steampowered.com/app/2330500/BETON_BRUTAL/"><img class="itemIndicator" src="steam.png"></a>BETON BRUTAL</div>
+            Look out for these up and coming projects!
+            <div class="listItem"><a class="itemIndicator" href="https://store.steampowered.com/app/1396870/ENCHAIN/"><img class="itemIndicator" src="steam.png"></a>Enchain</div>
+            <div class="listItem"><a class="itemIndicator" href="https://store.steampowered.com/app/2352640/You_Are_Peter_Shorts/"><img class="itemIndicator" src="steam.png"></a>You Are Peter Shorts</div>
+            <div class="listItem"><a class="itemIndicator" href="https://store.steampowered.com/app/1997290/ParaPerspective/"><img class="itemIndicator" src="steam.png"></a>ParaPerspective</div>
+            <div class="listItem"><a class="itemIndicator" href="https://store.steampowered.com/app/2231820/Sheep_Lad/"><img class="itemIndicator" src="steam.png"></a>Sheeplad</div>
+            <div class="listItem"><a class="itemIndicator" href="https://store.steampowered.com/app/1417930/Lorns_Lure/"><img class="itemIndicator" src="steam.png"></a>Lorn's Lure</div>
+            <div class="listItem"><a class="itemIndicator" href="https://www.patreon.com/aarthificial"><img class="itemIndicator" src="patreon.png"></a>Astortion</div>
+            <div class="listItem"><a class="itemIndicator" href="https://twitter.com/jamphibian_game"><img class="itemIndicator" src="twitter.png"></a>Jamphibious</div>
+            <div class="listItem"><a class="itemIndicator" href="https://store.steampowered.com/app/1602560/The_Many_Pieces_of_Mr_Coo/"><img class="itemIndicator" src="steam.png"></a>The Many Pieces of Mr. Coo</div>
+            <div class="listItem"><a class="itemIndicator" href="https://store.steampowered.com/app/1944040/goblinAmerica/"><img class="itemIndicator" src="steam.png"></a>goblinAmerica</div>
+            <div class="listItem"><a class="itemIndicator" href="https://store.steampowered.com/app/2154780/Elation_For_The_Wonder_Box_6000/"><img class="itemIndicator" src="steam.png"></a>Elation For The Wonder Box 6000</div>
+            <div class="listItem"><a class="itemIndicator" href="https://store.steampowered.com/app/2302470/Full_Fathom/"><img class="itemIndicator" src="steam.png"></a>Full Fathom</div>
+          </div>
+        </div>
+        <div id="notepadSelection"></div>
+        <div id="notepad" onclick="openNotepad()">
+          <img src="notepad.png" width="100%" height="auto" draggable="false">
+        </div>
+        <div id="consoleArea">
+          <div id="consoleX"></div>
+          <div id="consoleLog">
+            <div class="consoleLogUnit">CheekOS [Version 73.65.78]</div>
+            <div class="consoleLogUnit">(C) 2006 Cheek Corp. All rights reserved.</div>
+            <div class="consoleLogUnit">All lower case. No special charectors. Enter to send. Escape to close.</div>
+          </div>
+          <div id="consoleInput"></div>
+          <div style="position: absolute;top: 90.5%;bottom: 2%;left: 1%;right: 95%;font-size: 2.5vw;text-align:center;user-select: none;">></div>
+          <div id="inputIndicator"></div>
+        </div>
+        <div id="consoleSelection"></div>
+        <div id="console" onclick="openConsole()">
+          <img src="console.png" width="100%" height="auto" draggable="false">
+        </div>
+        <div id="bar">
+          <a class="a" href="/about">
+            <img id="info" src="information.png" width="100%" height="100%" draggable="false">
+          </a>
+          <a class="a" href="/portfolio">
+            <img id="portfolio" src="portfolio.png" width="100%" height="100%" draggable="false">
+          </a>
+          <a class="a" href="/online">
+            <img id="browser" src="browser.png" width="100%" height="100%" draggable="false">
+          </a>
+          <a class="a" href="/launcher">
+            <img id="launcher" src="launcher.png" width="100%" height="100%" draggable="false">
+          </a>
+        </div>
+        <div id="block"></div>
+    	</div>
+	  	<script src="scripts/monitor.js"></script>
+	  	<script src="scripts/home.js"></script>
+	  	<script src="scripts/console.js"></script>
+  	</div>
+  </body>
+</html>

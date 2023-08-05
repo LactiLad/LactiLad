@@ -1,0 +1,524 @@
+@font-face {
+    font-family: 'Unifont';
+    src: url('transfonter.org-20230405-004209/GNUUnifontFull.woff2') format('woff2'),
+        url('transfonter.org-20230405-004209/GNUUnifontFull.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+::selection {
+  background: black;
+  color: white;
+}
+::-moz-selection {
+  background: black;
+  color: white;
+}
+body {
+  text-align: left;
+  color: black;
+  background: url("/wallpaper.png");
+  background-size: cover;
+  overflow-y: hidden;
+}
+h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  color: black;
+}
+p {
+  color: black;
+  overflow: hidden;
+  text-align: left;
+}
+a {
+  z-index: 2;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+	-webkit-user-drag: none;
+	-html-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	user-drag: none;
+  cursor: url("pointer.png") 28 4, pointer;
+}
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+	-webkit-user-drag: none;
+	-html-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	user-drag: none;
+}
+#x {
+  position: absolute;
+  z-index: 2;
+  right: 1.086956522%;
+  top: 1.851851852%;
+  left: 96.4673913%;
+  bottom: 93.98148148%;
+}
+#dropDown {
+  position: absolute;
+  background-image: url("osteam.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 10%;
+  right: 80%;
+  top: 40%;
+  bottom:40%;
+}
+#dropDownMenu {
+  position: absolute;
+  left: 10%;
+  right: 80%;
+  top: 40%;
+  bottom:40%;
+  display: flex;
+  overflow: visible;
+  justify-content: flex-end;
+  flex-direction: column;
+  visibility: hidden;
+  font-size: 0;
+  transform: translate(0,-7.75%);
+}
+.platform {
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+#confirm {
+  position: absolute;
+  background-image: url("ocheck.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 80%;
+  right: 10%;
+  top: 40%;
+  bottom:40%;
+}
+#oinput {
+  position: absolute;
+  left: 22%;
+  right: 22%;
+  top: 41%;
+  bottom: 42%;
+  border: solid black;
+  border-width: 0.5vw;
+}
+#gameText {
+  color: black;
+}
+#videoText {
+  color: black;
+}
+#modelingText {
+  color: black;
+}
+#webText {
+  color: black;
+}
+#monitor {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("/foreground.png");
+
+  background-color: white;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+#screen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("/background.png");
+  background-size: cover;
+  z-index: 0;
+  cursor: url("cursor.png") 4 4, default;
+}
+#bar {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  top: 65%;
+  bottom: 7%;
+  left: 7%;
+  right: 7%;
+  z-index: 1;
+}
+#pageArea {
+  position: absolute;
+  z-index: 2;
+  left: 1.086956522%;
+  right: 1.086956522%;
+  bottom: 1.851851852%;
+  top: 7.40740740741%;
+  font-family: 'Unifont';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 40px;
+  text-align: left;
+  color: black;
+}
+.site {
+  visibility: visible;
+  position: absolute;
+  right: 5.5%;
+  left: 25%;
+  top: 20%;
+  bottom: 0;
+  text-align: center;
+  background: rgba(0,0,0,0);
+  overflow: hidden;
+}
+#siteList {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  top: 20%;
+  bottom: 20%;
+  left: 2.5%;
+  right: 77.5%;
+  z-index: 1;
+}
+#notepadArea {
+  position: absolute;
+  left: 1.630434782608696%;
+  right: 62.5%;
+  bottom: 2.777777777777778%;
+  top: 2.777777777777778%;
+  z-index: 3;
+  background: url("notepadArea.png");
+  background-size: cover;
+  visibility: hidden;
+}
+#notepadAreaText {
+  position: absolute;
+  left: 1.515151515151515%;
+  right: 1.515151515151515%;
+  bottom: 0.9852216748768473%;
+  top: 15.27093596059113%;
+  font-family: 'Unifont';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 25px;
+  text-align: left;
+  color: black;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 5px;
+}
+#notepadX {
+  position: absolute;
+  left: 90.9090909090909%; 
+  right: 1.515151515151515%; 
+  bottom: 93.1034482758621%; 
+  top: 0.9852216748768473%;
+  cursor: url("pointer.png") 28 4, pointer;
+}
+.listItem {
+  margin-left: 15px;
+}
+.itemIndicator {
+  width: 25px;
+  margin-right: 5px;
+  transform: translate(0,5px);
+}
+#notepad {
+  background-size: 100% 100%;
+  background-color: rgba(0,0,0,0);
+  border-color: rgba(0,0,0,0);
+  border-width: 0.125vw;
+  overflow: visible;
+  position: absolute;
+  top: 5%;
+  bottom: 80%;
+  right: 85%;
+  left: 3%;
+  z-index: 2;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+#notepadSelection {
+  background: white;
+  border-width: 0.5vw;
+  border: solid black;
+  position: absolute;
+  visibility: hidden;
+  top: 3%;
+  bottom: 72%;
+  right: 84%;
+  left: 2%;
+  z-index: 2;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+#consoleSelection {
+  background: white;
+  border-width: 0.5vw;
+  border: solid black;
+  position: absolute;
+  visibility: hidden;
+  top: 29%;
+  bottom: 46%;
+  right: 84%;
+  left: 2%;
+  z-index: 2;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+#consoleArea {
+  position: absolute;
+  left: 1%;
+  right: 10%;
+  bottom: 20%;
+  top: 2%;
+  z-index: 3;
+  font-family: 'Unifont';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 25px;
+  text-align: left;
+  color: white;
+  background-color: black;
+  border: solid white;
+  border-width: 0.5vw;
+  visibility: hidden;
+  overflow: hidden;
+}
+#consoleX {
+  position: absolute;
+  left: 96.4523196512%; 
+  right: 0.506811478398972%;
+  bottom: 93.1034482758621%; 
+  top: 0.9852216748768473%;
+  z-index: 3;
+  background-image: url("X.png");
+  background-size: cover;
+  cursor: url("pointer.png") 28 4, pointer;
+}
+#consoleLog {
+  position: absolute;
+  display: flex;
+  overflow: hidden;
+  justify-content: flex-end;
+  flex-direction: column;
+  top: 2%;
+  bottom: 10%;
+  left: 1%;
+  right: 1%;
+}
+#inputIndicator {
+  position: absolute;
+  top: 92.25%;
+  bottom: 2.5%;
+  left: 4.25%;
+  right: 95.25%;
+	animation: fade 1s steps(1) infinite;
+  background-color: white;
+  border: none;
+}
+@keyframes fade {
+  0% {background-color:rgba(255,255,255,1)}
+  50% {background-color:rgba(255,255,255,0)}
+  100% {background-color:rgba(255,255,255,1)}
+}
+#consoleInput {
+  position: absolute;
+  top: 95.75%;
+  bottom: 0;
+  left: 4%;
+  right: 1%;
+  font-family: 'Unifont';
+  color: white;
+  user-select: none;
+  overflow: visible;
+  transform: translate(0,-17px);
+}
+.consoleLogUnit {
+  color: white;
+  margin: 1%;
+  user-select: none;
+}
+#console {
+  background-size: 100% 100%;
+  background-color: rgba(0,0,0,0);
+  overflow: visible;
+  position: absolute;
+  top: 31%;
+  bottom: 54%;
+  right: 85%;
+  left: 3%;
+  z-index: 2;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+#block {
+  position: absolute;
+  background-color: rgba(0,0,0,0);
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
+}
+#page {
+  cursor: url("cursor.png") 4 4, default;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("/page.png");
+  background-size: cover;
+  z-index: 0;
+  background-color: rgba(0,0,0,0);
+}
+
+.page {
+  cursor: url("cursor.png") 4 4, default;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-color: rgba(0,0,0,0);
+}
+.siteSection {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  background: white;
+  border: dashed black;
+  border-width: 5px;
+  text-align: center;
+  padding: 3px 0;
+  cursor: url("pointer.png") 28 4, pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.75vw;
+}
+
+@keyframes hover {
+  0% {
+    animation-timing-function: ease-in-out;
+    transform: rotate(5deg);
+  }
+  50% {
+    animation-timing-function: ease-in-out;
+    transform: rotate(-5deg);
+  }
+  100% {
+    animation-timing-function: ease-in-out;
+    transform: rotate(5deg);
+  }
+}
+/*8 frames a second*/
+#notepad:hover {
+  filter: invert(1);
+  background-size: 100% 100%;
+  transition: 0s ;
+}
+#console:hover {
+  filter: invert(1);
+  background-size: 100% 100%;
+  transition: 0s ;
+}
+#info {
+	transition: .5s steps(4);
+  object-position: 0 0;
+  overflow: visible;
+}
+#info:hover {
+  transition: .25s steps(2);
+  object-position: 0 -25px;
+}
+#info:active {
+  transition: 0s;
+  filter: invert(1);
+}
+
+#portfolio {
+	transition: .5s steps(4);
+  object-position: 0 0;
+  overflow: visible;
+}
+#portfolio:hover {
+  transition: .25s steps(2);
+  object-position: 0 -25px;
+}
+#portfolio:active {
+  transition: 0s;
+  filter: invert(1);
+}
+
+#browser {
+	transition: .5s steps(4);
+  object-position: 0 0;
+  overflow: visible;
+}
+#browser:hover {
+  transition: .25s steps(2);
+  object-position: 0 -25px;
+}
+#browser:active {
+  transition: 0s;
+  filter: invert(1);
+}
+
+#launcher {
+	transition: .5s steps(4);
+  object-position: 0 0;
+  overflow: visible;
+}
+#launcher:hover {
+  transition: .25s steps(2);
+  object-position: 0 -25px;
+}
+#launcher:active {
+  transition: 0s;
+  filter: invert(1);
+}
+
+html {
+  image-rendering: pixelated;
+}
+
+
+
+
