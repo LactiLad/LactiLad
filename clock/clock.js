@@ -1,3 +1,10 @@
+import { interpolate } from '/clock/node_modules/culori/src/index.js';
+import { formatRgb } from '/clock/node_modules/culori/src/index.js';
+import { formatHex8 } from '/clock/node_modules/culori/src/index.js';
+import { convertOkhsvToOklab } from '/clock/node_modules/culori/src/index.js';
+import { convertOklabToRgb } from '/clock/node_modules/culori/src/index.js';
+currentTime("color");
+
 var s = false;
 var m = false;
 var h = false;
@@ -10,6 +17,7 @@ function currentTime(clockStyle) {
   let dy = date.getDate();
   let mh = date.getMonth();
   let yr = date.getFullYear();
+
   let session = "A";
   
   if (ss === 0) {//11:11.0
@@ -44,43 +52,33 @@ function currentTime(clockStyle) {
     document.getElementById("session").innerText = session + "M";
     document.getElementById("seconds").innerText = ss;
     document.getElementById("date").innerText = mh + " " + dy + " " + yr;
+    
+    var totalTime = (((date.getHours() * 60) + date.getMinutes()) * 60) + date.getSeconds() + date.getMilliseconds()/1000.0;
 
-    var r = hh * 21.3333333333;
-    var g = mm * 4.33898305085;
-    var b = ss * 4.33898305085;
-    
-    if (s)
-      b = 256-b;
-    if (m)
-      g = 256-g;
-    if (h)
-      r = 256-r;
-    
-    document.body.style.backgroundColor = "rgb("+r+", "+g+", "+b+")";
-    
-    var vr = Math.round(r);
-    var vg = Math.round(g);
-    var vb = Math.round(b);
-    vr = (vr < 10) ? "0" + vr : vr;
-    vr = (vr < 100) ? "0" + vr : vr;
-    vg = (vg < 10) ? "0" + vg : vg;
-    vg = (vg < 100) ? "0" + vg : vg;
-    vb = (vb < 10) ? "0" + vb : vb;
-    vb = (vb < 100) ? "0" + vb : vb;
-    document.getElementById("color").innerText = "rgb("+vr+", "+vg+", "+vb+")";//+s+m+h;
+    var value = (Math.cos(2.0 * Math.PI * (totalTime/86400.0 + 0.5))/2.0 + 0.5);
 
-    r = 256-r;
-    g = 256-g;
-    b = 256-b;
-    
-    document.getElementById("clock").style.color = "rgb("+r+", "+g+", "+b+")";
-    document.getElementById("session").style.color = "rgb("+r+", "+g+", "+b+")";
-    document.getElementById("seconds").style.color = "rgb("+r+", "+g+", "+b+")";
-    document.getElementById("date").style.color = "rgb("+r+", "+g+", "+b+")";
-    document.getElementById("colon").style.color = "rgb("+r+", "+g+", "+b+")";
-    document.getElementById("color").style.color = "rgb("+r+", "+g+", "+b+")";
+    var color = convertOklabToRgb(convertOkhsvToOklab({mode: "hsv", h: totalTime, s: value, v: value, alpha: 1}));
+    var invColor = {mode: "rgb", r: 1 - color.r, g: 1 - color.g, b: 1 - color.b, alpha: 1};
+    var simColor = interpolate([color, invColor])(0.25);
+
+    // console.log(totalTime);
+    // console.log(value);
+
+    document.body.style.backgroundColor = formatHex8(color);
+    document.getElementById("color").innerText = formatRgb(color);
+    document.getElementById("clock").style.color = formatHex8(invColor);
+    document.getElementById("session").style.color = formatHex8(invColor);
+    document.getElementById("seconds").style.color = formatHex8(invColor);
+    document.getElementById("date").style.color = formatHex8(invColor);
+    document.getElementById("colon").style.color = formatHex8(invColor);
+    document.getElementById("color").style.color = formatHex8(simColor);
+    document.getElementById("menuOpenButton").style.color = formatHex8(simColor);
   }
   
   document.getElementById("clock").innerText = time; 
-  let t = setTimeout(function(){ currentTime(clockStyle) }, 1000);
+  let t = setTimeout(function(){ currentTime(clockStyle) }, 100);//every 1/19th seconds
+}
+
+function openMenu() {
+  document.getElementById("menu").style.visibility = "visible";
 }
